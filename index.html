@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pflanzen Trainer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1 id="main-title">Pflanzen Trainer</h1>
+    <p id="main-subtitle" class="subtitle">Wähle zuerst deinen Übungsbereich.</p>
+
+    <section id="mode-select" class="card">
+      <h2 class="section-title">Was möchtest du üben?</h2>
+      <div class="mode-actions">
+        <button id="start-diseases" type="button">Krankheiten im Getreide</button>
+        <button id="start-weeds" type="button">Unkräuter im Getreide</button>
+        <button id="start-maize-weeds" type="button">Unkräuter im Mais</button>
+      </div>
+    </section>
+
+    <section id="quiz-section" class="card hidden">
+      <div class="top-row">
+        <p id="progress" class="progress">Bild 1 von 1</p>
+        <button id="back-to-menu" class="secondary" type="button">Zurück zur Auswahl</button>
+      </div>
+
+      <img id="quiz-image" alt="Übungsbild" src="">
+
+      <div id="answer-box" class="answer-box hidden">
+        <h2 class="answer-title">Lösung</h2>
+
+        <dl id="disease-answer" class="answer-grid">
+          <div class="row">
+            <dt>Krankheit</dt>
+            <dd id="answer-disease"></dd>
+          </div>
+          <div class="row">
+            <dt>BBCH / Zeitpunkt</dt>
+            <dd id="answer-bbch"></dd>
+          </div>
+          <div class="row">
+            <dt>Hintergrund / Wirkung</dt>
+            <dd id="answer-background"></dd>
+          </div>
+          <div class="row">
+            <dt>Typischer Monat</dt>
+            <dd id="answer-month"></dd>
+          </div>
+          <div class="row">
+            <dt>Hinweise / Besonderheiten</dt>
+            <dd id="answer-notes"></dd>
+          </div>
+        </dl>
+
+        <dl id="weed-answer" class="answer-grid hidden">
+          <div class="row">
+            <dt>Typ</dt>
+            <dd id="answer-weed-type"></dd>
+          </div>
+          <div class="row">
+            <dt>Bezeichnung</dt>
+            <dd id="answer-weed-name"></dd>
+          </div>
+          <div class="row">
+            <dt>Info</dt>
+            <dd id="answer-weed-details"></dd>
+          </div>
+          <div class="row">
+            <dt>Original (Text/Abbildung)</dt>
+            <dd id="answer-weed-full"></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="actions">
+        <button id="show-answer" type="button">Lösung anzeigen</button>
+        <button id="next-image" type="button">Nächstes Bild</button>
+        <button id="reshuffle" type="button">Neu mischen</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
